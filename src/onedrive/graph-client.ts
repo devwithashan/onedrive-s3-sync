@@ -3,11 +3,7 @@ import 'isomorphic-fetch';
 import { Client } from '@microsoft/microsoft-graph-client';
 import { GraphAuthProvider } from './graph-auth-provider.js';
 
-
-
-export function getGraphClient(
-  authProvider: GraphAuthProvider,
-): Client {
+export function getGraphClient(authProvider: GraphAuthProvider): Client {
   return Client.init({
     authProvider: async (done) => {
       try {

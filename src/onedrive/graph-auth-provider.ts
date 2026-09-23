@@ -4,9 +4,7 @@ export interface GraphAuthProvider {
   getAccessToken(): Promise<string>;
 }
 
-export class OneDriveDelegatedAuthProvider
-  implements GraphAuthProvider
-{
+export class OneDriveDelegatedAuthProvider implements GraphAuthProvider {
   private msalApp: PublicClientApplication;
 
   constructor(
